@@ -1,0 +1,348 @@
+:root{
+    --blue-: rgb(20, 114, 255);
+    --red-: rgb(255 17 17);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    height: 4000px;
+    background-image: url(./Images/flat-lay-frame-office-elements.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Sec1 */
+/* Head */
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo{
+    width: 64px;
+    height: 64px;
+}
+
+nav .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 200px;
+}
+
+nav .links span{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--blue-);
+    border-radius: 30px;
+    outline: 2px solid black;
+    font-size: 18px;
+}
+
+nav .links a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav .links a:hover{
+    transform: scale(1.1);
+}
+
+nav .links a:hover span{
+    box-shadow: 0px 0px 4px 2px black outset;
+}
+
+/* Head */
+/* about */
+section{
+    width: 100%;
+}
+
+section .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    height: 100%;
+}
+
+/* Welcome message */
+section .about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+section .about .pic{
+    width: 50%;
+}
+
+section .about .pic img{
+    width: 100%;
+}
+
+section .about .text{
+    width: 50%;
+    text-align: center;
+    color: crimson;
+}
+/* Welcome message */
+/* Some info */
+section .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+section .info .inf{
+    width: 30%;
+    height: 240px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #cdcdcd;
+    border-radius: 20px;
+}
+
+section .info .inf img{
+    width: 64px;
+    height: 64px;
+}
+
+section .info .inf h6{
+    color: var(--blue-);
+    font-weight: bold;
+}
+/* Some info */
+/* about */
+/* Sec1 */
+
+/* Sec2 */
+/* Skills parents */
+.allSkills{
+    width: 100%;
+    height: 70vh;
+}
+
+.allSkills .container{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* Skills parents */
+
+/* Title */
+.allSkills .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.allSkills .title h1{
+    font-weight: bold;
+}
+
+.allSkills .title hr{
+    color: rgb(70, 70, 70);
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+}
+/* Title */
+
+/* Skills */
+.allSkills .skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.allSkills .skills .skill{
+    display: flex;
+    width: calc(50% - 48px);
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    gap: 5px;
+}
+
+.allSkills .skills .skill .prog{
+    width: 100%;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.allSkills .skills .skill .prog span{
+    height: 100%;
+    width: 0px;
+    background-color: black;
+    display: block;
+    transition: width 0.3s linear;
+}
+/* Skills */
+/* Sec2 */
+
+/* extra Small devices */
+@media (max-width: 499px){
+    /* Sec1 */
+    /* Head */
+    nav .container{
+        justify-content: space-around;
+    }
+    nav .links{
+        flex-direction: column;
+        height: 73px;
+        align-items: end;
+    }
+    nav .links span{
+        font-size: 12px;
+    }
+    /* Head */
+    /* about */
+    section{
+        margin-top: 10px;
+    }
+    section .about .text h1, section .about .text h2{
+        font-size: 16px;
+    }
+    section .info {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    section .info .inf{
+        width: 40%;
+        height: 130px;
+    }
+    section .info .inf h6 {
+        font-size: 10px;
+    }
+    section .info .inf img {
+        width: 40px;
+        height: 40px;
+    }
+    /* about */
+    /* Sec1 */
+    /* Sec2 */
+    /* Skills parents */
+    .allSkills {
+        margin-top: 15%;
+    }
+    /* Skills parents */
+    /* Skills */
+    .allSkills .skills .skill{
+        width: calc(60% - 48px);
+    }
+    .allSkills .skills .skill .prog {
+        height: 7px;
+    }
+    .allSkills .skills .skill img{
+        width: 38px;
+        height: 38px;
+    }
+    /* Skills */
+    /* Sec2 */
+}
+
+/* Small devices */
+@media (min-width: 500px) and (max-width: 767px){
+    /* Sec1 */
+    /* about */
+    section .about .text h1, section .about .text h2{
+        font-size: 20px;
+    }
+    section .info {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    section .info .inf{
+        width: 35%;
+        height: 160px;
+    }
+    section .info .inf h6 {
+        font-size: 13px;
+    }
+    section .info .inf img {
+        width: 54px;
+        height: 54px;
+    }
+    /* about */
+    /* Sec1 */
+    /* Sec2 */
+    /* Skills parents */
+    .allSkills {
+        margin-top: 20%;
+    }
+    /* Skills parents */
+    /* Skills */
+    .allSkills .skills .skill{
+        width: calc(58% - 48px);
+    }
+    .allSkills .skills .skill img{
+        width: 50px;
+        height: 50px;
+    }
+    /* Skills */
+    /* Sec2 */
+}
+
+/* Medium devices */
+@media (min-width: 768px) and (max-width: 992px){
+    /* Sec1 */
+    /* about */
+    section .info .inf{
+        height: 210px;
+    }
+    section .info .inf h6{
+        font-size: 15px;
+    }
+    /* about */
+    /* Sec1 */
+    /* Sec2 */
+    /* Skills */
+    .allSkills .skills .skill {
+        width: calc(55% - 48px);
+    }
+    /* Skills */
+    /* Sec2 */
+}
+
+/* Large devices */
+@media (min-width: 993px) and (max-width: 1999px){ 
+    
+}
+
+/* X-Large devices */
+@media (min-width: 1200px) { 
+
+}
