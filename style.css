@@ -20,7 +20,54 @@ body{
     background-size: cover;
 }
 
-/* Sec1 */
+.fly_button{
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: rotate(45deg);
+    background-color: #e99800;
+    position: fixed;
+    bottom: 10px;
+    right: -60px;
+    outline: 2px solid black;
+    animation: light_animation 2s infinite 0.3s linear;
+    transition: 0.2s;
+}
+
+.fly_button a{
+    text-decoration: none;
+}
+
+.fly_button .click_link{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fly_button svg{
+    transform: rotate(-45deg);
+    font-size: 30px;
+    color: green;
+}
+
+@keyframes light_animation {
+    0%{
+        box-shadow: 0 0 6px 5px #d1d1d1;
+    }
+    50%{
+        box-shadow: 0 0 6px 5px #777777;
+    }
+    100%{
+        box-shadow: 0 0 6px 5px #d1d1d1;
+    }
+}
+
+/* First section */
 /* Head */
 nav{
     display: flex;
@@ -139,9 +186,9 @@ section .info .inf h6{
 }
 /* Some info */
 /* about */
-/* Sec1 */
+/* First section */
 
-/* Sec2 */
+/* Skills section */
 /* Skills parents */
 .allSkills{
     margin-top: 10%;
@@ -210,11 +257,15 @@ section .info .inf h6{
     transition: width 0.3s linear;
 }
 /* Skills */
-/* Sec2 */
+/* Skills section */
+
+/* Projects section */
+
+/* Projects section */
 
 /* extra Small devices */
 @media (max-width: 499px){
-    /* Sec1 */
+    /* First section */
     /* Head */
     nav .container{
         justify-content: space-around;
@@ -252,8 +303,8 @@ section .info .inf h6{
         height: 40px;
     }
     /* about */
-    /* Sec1 */
-    /* Sec2 */
+    /* First section */
+    /* Skills section */
     /* Skills parents */
     .allSkills {
         margin-top: 15%;
@@ -271,12 +322,12 @@ section .info .inf h6{
         height: 38px;
     }
     /* Skills */
-    /* Sec2 */
+    /* Skills section */
 }
 
 /* Small devices */
 @media (min-width: 500px) and (max-width: 767px){
-    /* Sec1 */
+    /* First section */
     /* about */
     section .about .text h1, section .about .text h2{
         font-size: 20px;
@@ -298,8 +349,8 @@ section .info .inf h6{
         height: 54px;
     }
     /* about */
-    /* Sec1 */
-    /* Sec2 */
+    /* First section */
+    /* Skills section */
     /* Skills parents */
     .allSkills {
         margin-top: 20%;
@@ -314,12 +365,12 @@ section .info .inf h6{
         height: 50px;
     }
     /* Skills */
-    /* Sec2 */
+    /* Skills section */
 }
 
 /* Medium devices */
 @media (min-width: 768px) and (max-width: 992px){
-    /* Sec1 */
+    /* First section */
     /* about */
     section .info .inf{
         height: 210px;
@@ -328,14 +379,14 @@ section .info .inf h6{
         font-size: 15px;
     }
     /* about */
-    /* Sec1 */
-    /* Sec2 */
+    /* First section */
+    /* Skills section */
     /* Skills */
     .allSkills .skills .skill {
         width: calc(55% - 48px);
     }
     /* Skills */
-    /* Sec2 */
+    /* Skills section */
 }
 
 /* Large devices */
