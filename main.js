@@ -30,15 +30,15 @@ window.onscroll = function(){
     }
 
     // Project div
-    if(window.scrollY >= 1100){
+    if(window.scrollY >= 1200){
         proj[0].style.opacity = 1;
         proj[0].style.transform = "unset"
     }
-    if(window.scrollY >= 1500){
+    if(window.scrollY >= 1300){
         proj[1].style.opacity = 1;
         proj[1].style.transform = "unset"
     }
-    if(window.scrollY >= 1900){
+    if(window.scrollY >= 1400){
         proj[2].style.opacity = 1;
         proj[2].style.transform = "unset"
     }
