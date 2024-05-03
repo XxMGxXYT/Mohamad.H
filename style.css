@@ -21,6 +21,7 @@ body{
 }
 
 .fly_button{
+    cursor: pointer;
     width: 50px;
     height: 50px;
     border-top-left-radius: 0%;
@@ -37,11 +38,7 @@ body{
     transition: 0.2s;
 }
 
-.fly_button a{
-    text-decoration: none;
-}
-
-.fly_button .click_link{
+.fly_button .but_icon{
     width: 100%;
     height: 100%;
     display: flex;
@@ -260,6 +257,71 @@ section .info .inf h6{
 /* Skills section */
 
 /* Projects section */
+.projects{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .project{
+    width: 100%;
+    height: 600px;
+}
+
+.projects .container{
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    background-color: #d1d1d1;
+    border-radius: 20px;
+    box-shadow: inset 0 0 4px 7px #dfdfdf;
+    outline: 3px solid gray;
+    transition: 1s;
+    transition-delay: 0.3s;
+    transition-property: opacity, transform;
+    transform: translate(-105%, 0px);
+}
+
+.projects .project .container .proj_text{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects .project .container .proj_text a{
+    text-decoration: none;
+}
+
+.projects .project .container .proj_text h6, .projects .project .container .proj_text h1{
+    text-align: center;
+    font-weight: bold;
+}
+.projects .project .container .proj_text h6{
+    font-size: 20px;
+}
+.projects .project .container .proj_text h1{
+    font-size: 30px;
+}
+
+.projects .project .container .proj_image{
+    width: 50%;
+    height: 60%;
+}
+
+.projects .project .container .proj_image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
 
 /* Projects section */
 
@@ -323,6 +385,23 @@ section .info .inf h6{
     }
     /* Skills */
     /* Skills section */
+    /* Projects section */
+    .projects .container{
+        width: 90%;
+    }
+    .projects .project {
+        height: 280px;
+    }
+    .projects .project .container .proj_text {
+        width: 45%;
+    }
+    .projects .project .container .proj_text h6{
+        font-size: 12px;
+    }
+    .projects .project .container .proj_text h1{
+        font-size: 17px;
+    }
+    /* Projects section */
 }
 
 /* Small devices */
@@ -366,6 +445,23 @@ section .info .inf h6{
     }
     /* Skills */
     /* Skills section */
+    /* Projects section */
+    .projects .container{
+        width: 90%;
+    }
+    .projects .project {
+        height: 400px;
+    }
+    .projects .project .container .proj_text {
+        width: 47%;
+    }
+    .projects .project .container .proj_text h6{
+        font-size: 15px;
+    }
+    .projects .project .container .proj_text h1{
+        font-size: 27px;
+    }
+    /* Projects section */
 }
 
 /* Medium devices */
@@ -387,6 +483,11 @@ section .info .inf h6{
     }
     /* Skills */
     /* Skills section */
+    /* Projects section */
+    .projects .project {
+        height: 540px;
+    }
+    /* Projects section */
 }
 
 /* Large devices */

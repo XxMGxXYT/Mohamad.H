@@ -4,8 +4,10 @@ let skillsSec = document.getElementById("allSkills")
 let allSpans = document.querySelectorAll(".prog span")
 // Get the back button
 let back = document.getElementById("back_but")
+// Get the project div
+let proj = document.querySelectorAll(".proj")
 
-
+let counter = 0
 
 // While window scrolling
 window.onscroll = function(){
@@ -19,7 +21,6 @@ window.onscroll = function(){
             e.style.width = "0%";
         })
     }
-    // Progress bars
 
     // Fly button
     if(window.scrollY >= 696){
@@ -27,5 +28,21 @@ window.onscroll = function(){
     } else{
         back.style.right = "-60px"
     }
-    // Fly button
+
+    // Project div
+    if(window.scrollY >= 1100){
+        proj[0].style.opacity = 1;
+        proj[0].style.transform = "unset"
+    }
+    if(window.scrollY >= 1500){
+        proj[1].style.opacity = 1;
+        proj[1].style.transform = "unset"
+    }
+    if(window.scrollY >= 1900){
+        proj[2].style.opacity = 1;
+        proj[2].style.transform = "unset"
+    }
 }
+
+// Fly button
+back.addEventListener("click", () => window.scrollTo(top))
