@@ -29,7 +29,7 @@ body{
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
     transform: rotate(45deg);
-    background-color: #e99800;
+    background-color: #ffea1b;
     position: fixed;
     bottom: 10px;
     right: -60px;
@@ -49,7 +49,7 @@ body{
 .fly_button svg{
     transform: rotate(-45deg);
     font-size: 30px;
-    color: green;
+    color: #000;
 }
 
 @keyframes light_animation {
@@ -149,7 +149,8 @@ section .about .pic img{
 section .about .text{
     width: 50%;
     text-align: center;
-    color: crimson;
+    color: var(--blue-);
+    font-weight: bold;
 }
 /* Welcome message */
 /* Some info */
@@ -277,13 +278,13 @@ section .info .inf h6{
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    background-color: #d1d1d1;
+    background-color: #84c3fa;
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    box-shadow: inset 0 0 4px 7px #dfdfdf;
-    outline: 3px solid gray;
+    box-shadow: inset 0 0 4px 7px #77acda;
+    outline: 2px solid #080544;
     transition: 1s;
-    transition-delay: 0.3s;
+    transition-delay: 0.5s;
     transition-property: opacity, transform;
     transform: translate(-105%, 0px);
 }
@@ -301,15 +302,22 @@ section .info .inf h6{
     text-decoration: none;
 }
 
+
 .projects .project .container .proj_text h6, .projects .project .container .proj_text h1{
     text-align: center;
     font-weight: bold;
 }
 .projects .project .container .proj_text h6{
     font-size: 20px;
+    color: black;
 }
 .projects .project .container .proj_text h1{
     font-size: 30px;
+    color: crimson;
+}
+
+.projects .project .container .proj_text h1:hover{
+    color: rgb(141, 14, 39);
 }
 
 .projects .project .container .proj_image{

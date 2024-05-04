@@ -8,6 +8,7 @@ let back = document.getElementById("back_but")
 let proj = document.querySelectorAll(".proj")
 
 let counter = 0
+let proj_scroll = 300
 
 // While window scrolling
 window.onscroll = function(){
@@ -30,21 +31,29 @@ window.onscroll = function(){
     }
 
     // Project div
-    if(window.scrollY >= 1100){
+    if(window.scrollY >= proj[0].offsetTop - proj_scroll){
         proj[0].style.opacity = 1;
         proj[0].style.transform = "unset"
     }
-    if(window.scrollY >= 1200){
-        setTimeout(() =>{
-            proj[1].style.opacity = 1;
-            proj[1].style.transform = "unset"
-        }, 500)
+    if(window.scrollY >= proj[1].offsetTop - proj_scroll){
+        proj[1].style.opacity = 1;
+        proj[1].style.transform = "unset"
     }
-    if(window.scrollY >= 1300){
-        setTimeout(() =>{
-            proj[2].style.opacity = 1;
-            proj[2].style.transform = "unset"
-        }, 1000)
+    if(window.scrollY >= proj[2].offsetTop - proj_scroll){
+        proj[2].style.opacity = 1;
+        proj[2].style.transform = "unset"
+    }
+    if(window.scrollY >= proj[3].offsetTop - proj_scroll){
+        proj[3].style.opacity = 1;
+        proj[3].style.transform = "unset"
+    }
+    if(window.scrollY >= proj[4].offsetTop - proj_scroll){
+        proj[4].style.opacity = 1;
+        proj[4].style.transform = "unset"
+    }
+    if(window.scrollY >= proj[5].offsetTop - proj_scroll){
+        proj[5].style.opacity = 1;
+        proj[5].style.transform = "unset"
     }
 }
 
