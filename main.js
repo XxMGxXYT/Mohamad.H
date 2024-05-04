@@ -8,7 +8,7 @@ let back = document.getElementById("back_but")
 let proj = document.querySelectorAll(".proj")
 
 let counter = 0
-let proj_scroll = 300
+let proj_scroll = 600
 
 // While window scrolling
 window.onscroll = function(){
