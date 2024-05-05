@@ -6,8 +6,13 @@ let allSpans = document.querySelectorAll(".prog span")
 let back = document.getElementById("back_but")
 // Get the project div
 let proj = document.querySelectorAll(".proj")
+// Get message div
+let msg = document.getElementById("msg")
+// Get all not_finished features
+let not_finished = document.querySelectorAll(".not_finished")
 
-let counter = 0
+
+// Standerd projects scrollY
 let proj_scroll = 600
 
 // While window scrolling
@@ -59,3 +64,20 @@ window.onscroll = function(){
 
 // Fly button
 back.addEventListener("click", () => window.scrollTo(top))
+
+// Message div
+function showMsg(){
+    msg.style.display = "flex";
+    setTimeout(() => {
+        msg.style.opacity = 1;
+    }, 300)
+    setTimeout(() => {
+        msg.style.opacity = 0;
+    }, 4000)
+    setTimeout(() =>{
+        msg.style.display = "none";
+    }, 4300)
+}
+not_finished.forEach((e) => {
+    e.addEventListener("click", () => showMsg())
+})
