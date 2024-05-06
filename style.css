@@ -1,6 +1,10 @@
 :root{
     --blue-: rgb(20, 114, 255);
     --red-: rgb(255 17 17);
+    --dark_blue-: #0d131d;
+    --blue_gray-: #4b5c6c;
+    --light_blue_gray-: #6e829e;
+    --light_gray-: #b3b3b3;
 }
 
 * {
@@ -153,47 +157,56 @@ nav .links a:hover span{
 /* Head */
 /* about */
 section{
+    margin-top: 10%;
     width: 100%;
 }
+
 
 section .container{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     height: 100%;
 }
 
 /* Welcome message */
-section .about{
+
+section .container .text{
+    width: 100%;
+    height: 400px;
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+}
+
+section .container .text .title{
+    transition: 0.7s  0.3s;
+    transition-property: opacity, left;
     width: 100%;
+    opacity: 0;
+    left: -40%;
+    position: absolute;
 }
 
-section .about .pic{
-    width: 50%;
-}
-
-section .about .pic img{
-    width: 100%;
-}
-
-section .about .text{
-    width: 50%;
-    text-align: center;
-    color: var(--blue-);
+section .container .text .title h1, section .container .text .title h2{
+    color: #b3b3b3;
     font-weight: bold;
+    font-size: 50px;
 }
+
 /* Welcome message */
 /* Some info */
+
 section .info{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;
+    transition: 1s opacity 0.5s;
+    opacity: 0;
 }
 
 section .info .inf{
@@ -216,8 +229,8 @@ section .info .inf h6{
     color: var(--blue-);
     font-weight: bold;
 }
+
 /* Some info */
-/* about */
 /* First section */
 
 /* Skills section */
@@ -440,8 +453,11 @@ footer .container .other_links .links svg{
     font-size: 30px;
 }
 
-footer .container .other_links .links svg:nth-child(1){
+footer .container .other_links .links:nth-child(2) svg{
     color: #09ff09;
+}
+footer .container .other_links .links:nth-child(1) svg{
+    color: gray;
 }
 
 footer .container .other_links .links span {
@@ -474,10 +490,18 @@ footer .container .other_links .links span {
     /* Head */
     /* about */
     section{
-        margin-top: 10px;
+        margin-top: 20%;
     }
-    section .about .text h1, section .about .text h2{
-        font-size: 16px;
+    section .container .text {
+        align-items: center;
+    }
+    section .container .text .title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container .text .title h1, section .container .text .title h2 {
+        font-size: 28px;
     }
     section .info {
         justify-content: center;
@@ -565,8 +589,8 @@ footer .container .other_links .links span {
 @media (min-width: 500px) and (max-width: 767px){
     /* First section */
     /* about */
-    section .about .text h1, section .about .text h2{
-        font-size: 20px;
+    .container .text .title h1, section .container .text .title h2 {
+        font-size: 40px;
     }
     section .info {
         justify-content: center;

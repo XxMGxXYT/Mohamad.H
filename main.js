@@ -10,10 +10,14 @@ let proj = document.querySelectorAll(".proj")
 let msg = document.getElementById("msg")
 // Get all not_finished features
 let not_finished = document.querySelectorAll(".not_finished")
-
+// Get All text_divs
+let text_divs = document.querySelectorAll(".text .title")
+// Get info div 
+let info = document.getElementById("info")
 
 // Standerd projects scrollY
 let proj_scroll = 600
+
 
 // While window scrolling
 window.onscroll = function(){
@@ -33,6 +37,11 @@ window.onscroll = function(){
         back.style.right = "10px"
     } else{
         back.style.right = "-60px"
+    }
+
+    // Info div 
+    if(window.scrollY >= skillsSec.offsetTop - 700){
+        info.style.opacity = 1;
     }
 
     // Project div
@@ -81,3 +90,28 @@ function showMsg(){
 not_finished.forEach((e) => {
     e.addEventListener("click", () => showMsg())
 })
+
+// Welcome message divs
+let counter = 1
+
+// First time when the website starts
+text_divs[0].style.left = "0"
+text_divs[0].style.opacity = 1
+setTimeout(() => {
+    text_divs[0].style.left = "-40%"
+    text_divs[0].style.opacity = 0
+}, 5000)
+// Then looping
+setInterval(() => {
+    text_divs[counter].style.left = "0"
+    text_divs[counter].style.opacity = 1
+    setTimeout(() => {
+        text_divs[counter].style.left = "-40%"
+        text_divs[counter].style.opacity = 0
+        if(counter !== text_divs.length - 1){
+            counter += 1
+        } else{
+            counter = 0
+        }
+    }, 5000)
+}, 6000)
