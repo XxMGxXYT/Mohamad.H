@@ -1,6 +1,6 @@
 :root{
     --blue-: rgb(20, 114, 255);
-    --red-: rgb(255 17 17);
+    --red-: rgb(219, 15, 0);
     --dark_blue-: #0d131d;
     --blue_gray-: #4b5c6c;
     --light_blue_gray-: #6e829e;
@@ -133,7 +133,9 @@ nav .links{
 nav .links span{
     text-align: center;
     padding: 10px;
-    background-color: var(--blue-);
+    background-color: var(--light_gray-);
+    color: black;
+    font-weight: 600;
     border-radius: 30px;
     outline: 2px solid black;
     font-size: 18px;
@@ -196,6 +198,10 @@ section .container .text .title h1, section .container .text .title h2{
     font-size: 50px;
 }
 
+section .container .text .title span{
+    color: gainsboro;
+}
+
 /* Welcome message */
 /* Some info */
 
@@ -205,9 +211,13 @@ section .info{
     align-items: center;
     width: 100%;
     height: 100%;
-    transition: 1s opacity 0.5s;
+    transition: 1s 0.5s;
+    transition-property: opacity, transform;
     opacity: 0;
+    transform: translate(0px, -50%);
 }
+
+
 
 section .info .inf{
     width: 30%;
@@ -216,7 +226,9 @@ section .info .inf{
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    background-color: #cdcdcd;
+    background-color: var(--light_blue_gray-);
+    border: 2px solid black;
+    box-shadow: inset 0 0 15px 1px black;
     border-radius: 20px;
 }
 
@@ -226,7 +238,7 @@ section .info .inf img{
 }
 
 section .info .inf h6{
-    color: var(--blue-);
+    color: black;
     font-weight: bold;
 }
 
@@ -258,14 +270,16 @@ section .info .inf h6{
 }
 
 .allSkills .title h1{
+    color: gainsboro;
     font-weight: bold;
 }
 
 .allSkills .title hr{
-    color: rgb(70, 70, 70);
+    color: var(--light_gray-);
     height: 5px;
     width: 100%;
     border-radius: 10px;
+    outline: 2px solid black;
 }
 /* Title */
 
@@ -314,6 +328,23 @@ section .info .inf h6{
     justify-content: center;
 }
 
+.projects .title{
+    text-align: center;
+    width: 90%;
+}
+
+.projects .title h1{
+    color: gainsboro;
+}
+
+.projects .title hr{
+    color: var(--light_gray-);
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+    outline: 2px solid black;
+}
+
 .projects .project{
     width: 80%;
     height: 500px;
@@ -325,11 +356,11 @@ section .info .inf h6{
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    background-color: #84c3fa;
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    box-shadow: inset 0 0 4px 7px #77acda;
-    outline: 2px solid #080544;
+    background-color: var(--light_blue_gray-);
+    border: 2px solid black;
+    box-shadow: inset 0 0 15px 1px black;
     transition: 1s;
     transition-delay: 0.5s;
     transition-property: opacity, transform;
