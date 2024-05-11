@@ -70,6 +70,10 @@ window.onscroll = function(){
         proj[5].style.opacity = 1;
         proj[5].style.transform = "unset"
     }
+    if(window.scrollY >= proj[6].offsetTop - proj_scroll){
+        proj[5].style.opacity = 1;
+        proj[5].style.transform = "unset"
+    }
 }
 
 // Fly button
