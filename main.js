@@ -40,7 +40,7 @@ window.onscroll = function(){
     }
 
     // Info div 
-    if(window.scrollY >= skillsSec.offsetTop - 700){
+    if(window.scrollY >= skillsSec.offsetTop - 750){
         info.style.opacity = 1;
         info.style.transform = "unset";
     }
